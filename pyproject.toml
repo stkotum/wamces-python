@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wamces"
+version = "1.0.0"
+description = "Python port of WAMCES, the dynamic model of the continental European power system by R. Musca"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT AND CC-BY-4.0"
+license-files = ["LICENSE", "src/wamces/data/LICENSE"]
+authors = [{ name = "Stephan Kohlhaas", email = "stephan.kohlhaas@tum.de" }]
+keywords = ["power systems", "frequency dynamics", "wide-area control", "simulation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+test = ["pytest", "scipy"]
+
+[project.urls]
+Repository = "https://github.com/stkotum/wamces-python"
+"Original model" = "https://doi.org/10.5281/zenodo.18721887"
+"Original article" = "https://doi.org/10.3390/electricity7020028"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wamces = ["data/*.csv", "data/LICENSE", "data/README.md"]
+
+[tool.pytest.ini_options]
+markers = ["slow: the full 50 s comparison with Simulink (about two minutes)"]
+testpaths = ["tests"]

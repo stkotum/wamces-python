@@ -1,0 +1,82 @@
+cff-version: 1.2.0
+title: "WAMCES in Python"
+message: >-
+  This repository is a port. If you use it, please cite the article of the original
+  model under preferred-citation. Please cite the Zenodo record of the model as well.
+type: software
+authors:
+  - family-names: Kohlhaas
+    given-names: Stephan
+    email: stephan.kohlhaas@tum.de
+    affiliation: "Technical University of Munich"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/stkotum/wamces-python"
+abstract: >-
+  A Python port of WAMCES, the dynamic model of the continental European power
+  system by R. Musca: 3809 buses, 618 synchronous machines with voltage regulators,
+  stabilisers and governors, 300 grid-forming and 500 grid-following converters
+  and 1573 PMUs with a central unit. It needs only numpy and reproduces every state
+  of the published Simulink model at every step to 8e-12 of its largest value.
+keywords:
+  - power systems
+  - frequency dynamics
+  - wide-area monitoring and control
+  - grid-forming converters
+  - continental Europe
+
+preferred-citation:
+  type: article
+  title: "Dynamic Model of the European Power System for Wide-Area Monitoring and Control Applications"
+  authors:
+    - family-names: Musca
+      given-names: Rossano
+    - family-names: Ippolito
+      given-names: Mariano Giuseppe
+    - family-names: Riva Sanseverino
+      given-names: Eleonora
+  journal: Electricity
+  volume: 7
+  issue: 2
+  start: 28
+  year: 2026
+  doi: 10.3390/electricity7020028
+
+references:
+  - type: software
+    title: "WAMCES - Wide-Area Monitoring and Control of the European power System"
+    authors:
+      - family-names: Musca
+        given-names: Rossano
+    year: 2026
+    version: "1"
+    doi: 10.5281/zenodo.18721887
+    license: CC-BY-4.0
+  - type: report
+    title: "Dynamic Model of Continental Europe V2"
+    authors:
+      - name: "ENTSO-E, Subgroup System Protection and Dynamics"
+    institution:
+      name: "ENTSO-E"
+    date-released: 2024-06-04
+    url: "https://eepublicdownloads.blob.core.windows.net/public-cdn-container/clean-documents/SOC%20documents/Public_report_DYNAMIC_MODEL_OF_CONTINENTAL_EUROPE_V2.pdf"
+  - type: article
+    title: "Wide-Synchronization Control for Power Systems With Grid-Forming Converters"
+    authors:
+      - family-names: Musca
+        given-names: Rossano
+      - family-names: Riva Sanseverino
+        given-names: Eleonora
+      - family-names: Zizzo
+        given-names: Gaetano
+      - family-names: Giannuzzi
+        given-names: Giorgio
+      - family-names: Pisani
+        given-names: Cosimo
+    journal: "IEEE Transactions on Power Systems"
+    volume: 39
+    issue: 3
+    start: 4998
+    end: 5007
+    year: 2024
+    doi: 10.1109/TPWRS.2023.3334876
